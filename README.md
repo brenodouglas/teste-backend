@@ -17,7 +17,7 @@ composer run server
 # acesse em http://localhost:8000
 ```
 
-* Rodando com docker (caso não tenha esta porta disponivel a recomendação é que troque no arquivo docker-compose.yaml linha 10) e usando http://localhost:
+* Rodando com docker (caso não tenha esta porta disponivel a recomendação é que troque no arquivo docker-compose.yaml linha 10):
 ```shell
 docker-compose up -d
 # acesse em http://localhost
