@@ -1,5 +1,21 @@
 {% extends "layout/default.twig" %}
 
 {% block content %}
-
+    <div class="row">
+        <div class="col text-center">
+            <a href="/list" class="btn btn-default">
+                Ver listagem
+            </a>
+        </div>
+        <div class="col text-center">
+            <a href="/download-csv" class="btn btn-default">
+                Download CSV
+            </a>
+        </div>
+        <div class="col text-center">
+            <a href="/download-excel" class="btn btn-default">
+                Download Excel
+            </a>
+        </div>
+    </div>
 {% endblock %}
