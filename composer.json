@@ -12,7 +12,8 @@
     "minimum-stability": "dev",
     "require": {
         "slim/slim": "^3.0",
-        "slim/twig-view": "dev-master"
+        "slim/twig-view": "dev-master",
+        "phpoffice/phpspreadsheet": "dev-master"
     },
     "autoload": {
         "psr-4": {
