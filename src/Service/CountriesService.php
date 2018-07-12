@@ -17,10 +17,11 @@ class CountriesService
             $countries = new \ArrayIterator();
 
             while ($fileIterator->valid()) {
-                list($letter, $name) = explode('   ', $fileIterator->current());
+                $current = $fileIterator->current();
                 $fileIterator->next();
 
                 if ($fileIterator->valid()) {
+                    list($letter, $name) = explode('   ', $current);
                     $countries->append([
                         $letter,
                         $name,

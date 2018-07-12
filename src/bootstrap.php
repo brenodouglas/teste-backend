@@ -1,6 +1,6 @@
 <?php
-define(CACHE_DIR, __DIR__.'/../resource/cache');
-define(RESOURCE_DIR, __DIR__.'/../resource');
+define('CACHE_DIR', __DIR__.'/../resource/cache');
+define('RESOURCE_DIR', __DIR__.'/../resource');
 
 $app = new \Slim\App([
     'settings' => [
