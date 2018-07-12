@@ -41,4 +41,27 @@ final class ContriesServiceTest extends TestCase
     {
         $this->assertCount(252, $this->countries);
     }
+
+    public function testIfGenerateCacheFile()
+    {
+        $countries = $this->invokeMethod($this->service, 'getCachedCountries');
+        $fileFullPath = $this->invokeMethod($this->service, 'getFileFullPath');
+        
+        $this->assertFileExists($fileFullPath);
+        $this->assertCount(252, $countries);
+        $this->assertEquals('ZW', $countries[0][0]);
+        $this->assertEquals('Zimbabwe', $countries[0][1]);
+        $this->assertEquals('(ZW) Zimbabwe', $countries[0][2]);
+
+        $this->invokeMethod($this->service, 'clearCache');
+    }
+
+    private function invokeMethod(&$object, $methodName, array $parameters = array())
+    {
+        $reflection = new \ReflectionClass(get_class($object));
+        $method = $reflection->getMethod($methodName);
+        $method->setAccessible(true);
+
+        return $method->invokeArgs($object, $parameters);
+    }
 }

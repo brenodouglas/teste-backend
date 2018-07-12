@@ -1,4 +1,7 @@
 <?php
+define(CACHE_DIR, __DIR__.'/../resource/cache');
+define(RESOURCE_DIR, __DIR__.'/../resource');
+
 $app = new \Slim\App([
     'settings' => [
         'displayErrorDetails' => true
@@ -18,5 +21,3 @@ $container['view'] = function ($container) {
 
     return $view;
 };
-
-require __DIR__.'/helpers.php';
