@@ -1,13 +1,16 @@
-{% extends "layout/base.twig" %}
+{% extends "layout/default.twig" %}
 
 {% block content %}
-<ul>
-    {% for country in countries %}
-        <li>
-            {{ country[0] }}
-            --
-            {{ country[2] }}
-        </li>
+<table class="table table-striped">
+  <tbody>
+    {% for k, country in countries %}
+    <tr>
+      <th scope="row">{{ k + 1 }}</th>
+      <td>{{ country[0] }}</td>
+      <td>{{ country[1] }}</td>
+      <td>{{ country[2] }}</td>
+    </tr>
     {% endfor %}
-</ul>
+  </tbody>
+</table>
 {% endblock %}

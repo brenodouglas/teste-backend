@@ -34,7 +34,7 @@ class XlsService implements FileServiceInterface
     }
     
     public function toString() : string
-    {   
+    {
         $fileName = $this->putFile();
         $content = file_get_contents($fileName);
 
