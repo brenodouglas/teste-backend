@@ -3,3 +3,5 @@
 /.vscode
 /.vagrant
 /resource/views/*
+/resource/cache/app/*
+/resource/cache/views/*
